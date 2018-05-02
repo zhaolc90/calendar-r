@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rc-calendar-range.week-calendar {
+  width: 602px;
+  overflow: visible;
+}
+.week-calendar .rc-calendar-tbody > tr:hover
+.rc-calendar-date {
+  background: #ebfaff;
+}
+
+.week-calendar .rc-calendar-tbody > tr:hover
+.rc-calendar-selected-day .rc-calendar-date {
+    background: #3fc7fa;
+}
+
+.week-calendar .week-calendar-sidebar {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  width:100px;    
+}
+.week-calendar .week-calendar-sidebar-top {
+  position:absolute;
+  top:-294px;
+  left:0;
+  height:38px;
+  z-index: 1001;
+  padding: 1px;
+}
+.week-calendar-sidebar-top>.week-calendar-input-wrap{
+  width: 106px;
+  float: left;
+  overflow: hidden;
+  height: 38px;
+}
+.week-calendar-date-input-wrap>.week-calendar-input{
+  width: 106px;
+  height: 38px;
+  /* border: 1px solid rgb(204, 204, 204); */
+  /* background-clip: padding-box; */
+  border: none;
+  font-size: 16px;
+}
+.week-calendar .rc-calendar-panel {
+  margin-right: 100px;
+}
