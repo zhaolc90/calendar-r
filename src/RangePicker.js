@@ -62,6 +62,19 @@ export default class Demo extends React.Component {
         <button onClick={this.lastWeek} style={{ margin: 20 }}>上一周</button>
       </div>);
     }
+    renderFooter() {
+      return (
+        <button onClick={this.lastWeek}
+          className={'cancel-btn'}  
+          style={{
+          margin: '20' ,
+          position: 'absolute',
+          right: '100px'
+        }}>
+          Cancel
+          </button>
+      )
+      }
     renderHeaderInput() {
       return (
           <div className="week-calendar-sidebar-top" key="sidebar">
@@ -86,7 +99,7 @@ export default class Demo extends React.Component {
         timePicker={<div />}
         format={formatStr}
         renderSidebar={this.renderSidebar}
-        // renderFooter={this.renderHeaderInput}
+        renderFooter={this.renderFooter}
         dateInputPlaceholder={[formatStr, formatStr]}
         defaultValue={[now, now.clone().add(1, 'months')]}
         locale={cn ? zhCN : enUS}
