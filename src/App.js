@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import logo from "./logo.svg";
 import calendar from "./calendar.svg";
 import "./App.css";
+import Demo1 from './DatePicker'
 
 // import RangeCalendar from "rc-calendar/lib/RangeCalendar";
 import Demo from "./RangePicker";
@@ -58,8 +59,8 @@ class App extends Component {
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        {/* <div style={{ margin: 10 }}>
-      <RangeCalendar
+        <div style={{ margin: 10 }}>
+      <Demo
         showToday={false}
         showWeekNumber
         dateInputPlaceholder={['start', 'end']}
@@ -73,11 +74,7 @@ class App extends Component {
         timePicker={timePickerElement}
         // disabledTime={disabledTime}
       />
-        </div> */}
-        <br/>
-        <br/>
-        <br/>
-        11<Demo />
+        </div>
 
         {/* <img width={'28px'} src={calendar} alt="logo" /> */}
       </div>

@@ -73,3 +73,62 @@
 .week-calendar .rc-calendar-panel {
   margin-right: 100px;
 }
+.rc-calendar-range-middle{
+  display: none;
+}
+a.rc-calendar-time-picker-btn{
+  display: none;
+}
+a.rc-calendar-ok-btn-disabled{
+  background-color: blue;
+}
+a.rc-calendar-ok-btn{
+  line-height: 1.5;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  position: relative;
+  color: blue;
+  border-color: blue;
+}
+.rc-calendar-range-left>.rc-calendar-input-wrap{
+  position: absolute;
+  width: 100px;
+  top: -40px;
+}
+.rc-calendar-range-left>.rc-calendar-input-wrap::before{
+  position: absolute;
+  z-index: -1;
+  width: 250px;
+  height: 100px;
+  content: "%";
+  background: #3fc7fa;
+}
+.rc-calendar-range-left>.rc-calendar-input-wrap::after{
+  position: absolute;
+  content: "-";
+  left: 100px;
+  top: 0;
+}
+.rc-calendar-range-right>.rc-calendar-input-wrap{
+  position: absolute;
+  width: 100px;
+  top: -40px;
+  left: -120px;
+}

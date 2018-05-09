@@ -12,7 +12,7 @@ import 'rc-time-picker/assets/index.css';
 
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import 'moment/locale/en-gb';
+import 'moment/locale/en-gb'; 
 
 const cn = false
 
@@ -80,11 +80,13 @@ export default class Demo extends React.Component {
         hoverValue={state.hoverValue}
         onHoverChange={this.onHoverChange}
         showWeekNumber={false}
-        showDateInput={false}        
+        showDateInput={true}        
         showOk={true}
         showToday={false}    
+        timePicker={<div />}
+        format={formatStr}
         renderSidebar={this.renderSidebar}
-        renderFooter={this.renderHeaderInput}
+        // renderFooter={this.renderHeaderInput}
         dateInputPlaceholder={[formatStr, formatStr]}
         defaultValue={[now, now.clone().add(1, 'months')]}
         locale={cn ? zhCN : enUS}
