@@ -43,34 +43,46 @@ function isValidRange(v) {
 } 
 
 export default class Demo extends React.Component {
-  state = {
-    value: [],
-    hoverValue: [],
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      value: [],
+      hoverValue: [],
+    }
+    this.onCancel = this.onCancel.bind(this)
   }
 
   onChange = (value) => {
     console.log('onChange', value);
     this.setState({ value });
   }
-
+  onCancel (v){
+    console.log('onCancel clicked',v)
+    console.log(this)
+    if (v.length === 0) {
+      this.onChange([now,now])
+    }
+  //  this.open 
+ }
   onHoverChange = (hoverValue) => {
     this.setState({ hoverValue });
   }
   renderSidebar() {
     return (
       <div className="week-calendar-sidebar" key="sidebar">
-        <button onClick={this.lastWeek} style={{ margin: 20 }}>上一周</button>
+        <button onClick={this.onCancel} style={{ margin: 20 }}>上一周</button>
       </div>);
     }
-    renderFooter() {
-      return (
-        <button onClick={this.lastWeek}
+  renderFooter() {
+    return (
+      <button onClick={() => { this.onCancel(this.defaultValue) }}
           className={'cancel-btn'}  
           style={{
           margin: '20' ,
           position: 'absolute',
           right: '100px'
-        }}>
+          }}>
           Cancel
           </button>
       )
@@ -103,6 +115,7 @@ export default class Demo extends React.Component {
         dateInputPlaceholder={[formatStr, formatStr]}
         defaultValue={[now, now.clone().add(1, 'months')]}
         locale={cn ? zhCN : enUS}
+        onCancel={this.onCancel}
       />
     );
     return (
