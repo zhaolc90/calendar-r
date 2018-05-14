@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import calendar from "./calendar.svg";
 import "./App.css";
 import Demo1 from './DatePicker'
+import InputMask from 'react-input-mask';
 
 // import RangeCalendar from "rc-calendar/lib/RangeCalendar";
 import Demo from "./RangePicker";
@@ -13,7 +14,6 @@ import TimePickerPanel from "rc-time-picker/lib/Panel";
 import moment from "moment";
 import "moment/locale/zh-cn";
 import "moment/locale/en-gb";
-import ReactSVG from 'react-svg'
 const cn = false;
 
 if (cn) {
@@ -75,7 +75,7 @@ class App extends Component {
         // disabledTime={disabledTime}
       />
         </div>
-
+        <InputMask {...this.props} mask="9999/99/99-9999/99/99" maskChar="" />
         {/* <img width={'28px'} src={calendar} alt="logo" /> */}
       </div>
     );

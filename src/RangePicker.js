@@ -1,7 +1,7 @@
 /* eslint react/no-multi-comp:0, no-console:0 */
 /* eslint no-mixed-operators: 0 */
 import React from 'react';
-import Picker from 'rc-calendar/lib/Picker';
+import Picker from './Picker';
 import RangeCalendar from 'rc-calendar/lib/RangeCalendar';
 import DateInput from 'rc-calendar/lib/date/DateInput';
 import zhCN from 'rc-calendar/lib/locale/zh_CN';
@@ -101,11 +101,10 @@ export default class Demo extends React.Component {
     const calendar = (
         <RangeCalendar
         className="week-calendar"
-        style={{top:'32px'}}      
         hoverValue={state.hoverValue}
         onHoverChange={this.onHoverChange}
         showWeekNumber={false}
-        showDateInput={true}        
+        showDateInput={false}        
         showOk={true}
         showToday={false}    
         timePicker={<div />}
@@ -124,6 +123,7 @@ export default class Demo extends React.Component {
         onChange={this.onChange}
         animation="slide-up"
         calendar={calendar}
+        format={formatStr}
       >
         {
           ({ value }) => {

@@ -132,7 +132,7 @@ a.rc-calendar-ok-btn{
   color: blue;
   border-color: blue;
 }
-.rc-calendar-range-left>.rc-calendar-input-wrap{
+/* .rc-calendar-range-left>.rc-calendar-input-wrap{
   position: absolute;
   width: 100px;
   top: -40px;
@@ -156,4 +156,10 @@ a.rc-calendar-ok-btn{
   width: 100px;
   top: -40px;
   left: -120px;
+} */
+input.mask-input{
+  width: 280px;
+  height: 34px;
+  padding-left: 3px;
+  font-size: 16px;
 }
